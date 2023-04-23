@@ -15,7 +15,7 @@ function Agenda() {
     })
     return (
         <>
-            <AgendaContainer background={BACKGROUND}>
+            <AgendaContainer fixed background={BACKGROUND}>
                 <AgendaHeader>
                     Agenda
                 </AgendaHeader>

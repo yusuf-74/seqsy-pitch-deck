@@ -8,12 +8,13 @@ export const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    ${({ fixed }) => fixed && css`background-attachment: fixed;`}
     ${({ color }) => color && css`color: ${color};`}
     ${({noPadding}) => !noPadding && css`padding: 1% 7%;`}
     ${({ width }) => width && css`width: ${width};`}
     ${({ alignItems }) => alignItems && css`align-items: ${alignItems};`}
     ${({ justifyContent }) => justifyContent && css`justify-content: ${justifyContent};`}
+    
 `;
 
 export const Header = styled.div`
@@ -30,6 +31,8 @@ export const Header = styled.div`
 export const SubContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    ${({justifyContent}) => justifyContent && css`justify-content: ${justifyContent};`}
+    ${({ column }) => column && css`flex-direction: column;`}
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
@@ -37,6 +40,19 @@ export const SubContainer = styled.div`
     ${({ width }) => width && css`width: ${width};`}
     ${({ color }) => color && css`color: ${color};`}
     ${({ minHeight }) => minHeight && css`min-height: ${minHeight};`}
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+`;
+export const ImageWrapper = styled.div`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+`;
+
+export const Image = styled.img`
+    width: 100%;
+    object-fit: cover;
 `;
 
 export const SpecialButton = styled.div`

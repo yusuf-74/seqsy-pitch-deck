@@ -35,7 +35,7 @@ function Team() {
         )
     })
   return (
-    <TeamContainer background= {BACKGROUND}>
+    <TeamContainer fixed background= {BACKGROUND}>
         <TeamHeader>
             Team Members
         </TeamHeader>

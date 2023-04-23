@@ -2,7 +2,7 @@ import styled , { css } from "styled-components";
 
 
 export const Paragraph = styled.p`
-font-size:0.8571428571428572em
+font-size:1em
 
 `;
 

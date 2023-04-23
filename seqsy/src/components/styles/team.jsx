@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled , { css } from "styled-components";
 
 export const TeamContainer = styled.div`
     display: flex;
     flex-direction: column;
     background-image: url(${({ background }) => background});
+    ${({ fixed }) => fixed && css`background-attachment: fixed;`}
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: 1% 7%;
 `;
 

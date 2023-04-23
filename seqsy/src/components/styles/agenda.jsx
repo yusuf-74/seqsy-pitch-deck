@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const AgendaContainer = styled.div`
     display: flex;
     flex-direction: column;
+    ${({ fixed }) => fixed && css`background-attachment: fixed;`}
     background-image: url(${({ background }) => background});
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: 1% 7%;
 `;
 export const AgendaHeader = styled.div`

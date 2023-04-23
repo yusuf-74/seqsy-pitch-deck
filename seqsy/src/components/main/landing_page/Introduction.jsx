@@ -37,7 +37,7 @@ function Introduction() {
         )    
     })
     return (
-        <Container background={"https://pitch-assets.imgix.net/fe43e39e-a5ff-4a3a-91d4-444c2efbe345?pitch-bytes=41445295&pitch-content-type=image%2Fpng&w=666&h=374&fit=max&auto=format&q=60&frame=1"}>
+        <Container fixed background={"https://pitch-assets.imgix.net/fe43e39e-a5ff-4a3a-91d4-444c2efbe345?pitch-bytes=41445295&pitch-content-type=image%2Fpng&w=666&h=374&fit=max&auto=format&q=60&frame=1"}>
             <Header margin = {"24px 0"} >Introduction</Header>
             <SubContainer>
                 <Container width = {"60%"} noPadding>
