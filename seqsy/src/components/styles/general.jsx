@@ -14,6 +14,15 @@ export const Container = styled.div`
     ${({ width }) => width && css`width: ${width};`}
     ${({ alignItems }) => alignItems && css`align-items: ${alignItems};`}
     ${({ justifyContent }) => justifyContent && css`justify-content: ${justifyContent};`}
+    ${({ onSmall }) => {
+        if (onSmall) {
+            return css`
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            `
+        }
+    }}
     
 `;
 

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react'
+import React, { useState } from 'react'
 import { Container, SubContainer, Header, SpecialButton } from '../../styles/general'
 import { HeaderContainer, SubHeader ,Image,ImageWrapper ,TextWrapper } from '../../styles/problem'
 function Problem() {
@@ -64,10 +64,6 @@ function Problem() {
         )
     })
 
-    useEffect(() => {
-
-    }, [active])
-
     return (
         <Container>
             <HeaderContainer>
@@ -77,11 +73,11 @@ function Problem() {
                 </SubHeader>
             </HeaderContainer>
             <SubContainer minHeight={"400px"}>
-                <Container width = {"40%"} justifyContent = {"center"}>
+                <Container width = {"40%"} justifyContent = {"center"} onSmall>
                     {/* Buttons Section */}
                     {buttons}
                 </Container>
-                <Container width = {"50%"} noPadding>
+                <Container width = {"50%"} noPadding onSmall>
                     {/* Content Section */}
                     {content}
                 </Container>
